@@ -1,0 +1,3 @@
+[submodule "app"]
+	path = app
+	url = git@github.com:Scholl-Gymnasium-Sondershausen/gym-scholl-web-app.git
