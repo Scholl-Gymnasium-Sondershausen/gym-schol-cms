@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "schoolClasses",
+  "info": {
+    "name": "Schulklassen"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": true
+    },
+    "schoolSubjects": {
+      "collection": "schoolsubject",
+      "via": "schoolClasses",
+      "dominant": true
+    },
+    "classTeacher": {
+      "model": "teacher"
+    },
+    "event": {
+      "model": "events",
+      "via": "schoolClasses"
+    },
+    "vertretungsplans": {
+      "via": "school_classes",
+      "collection": "representationplan"
+    },
+    "representationPlanAbsentClasses": {
+      "via": "absentClasses",
+      "collection": "representationplan"
+    },
+    "replacement": {
+      "via": "schulklassens",
+      "model": "replacement"
+    }
+  }
+}

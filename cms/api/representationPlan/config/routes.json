@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/representationPlan",
+      "handler": "representationPlan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/representationPlan/getRepresentationPlan",
+      "handler": "representationPlan.getRepresentationPlan",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/representationPlan/count",
+      "handler": "representationPlan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/representationPlan/:id",
+      "handler": "representationPlan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/representationPlan",
+      "handler": "representationPlan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/representationPlan/:id",
+      "handler": "representationPlan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/representationPlan/:id",
+      "handler": "representationPlan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "teacher",
+  "info": {
+    "name": "Lehrer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string"
+    },
+    "Surname": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "EMail": {
+      "type": "email"
+    },
+    "schoolSubjects": {
+      "collection": "schoolsubject",
+      "via": "teacher"
+    },
+    "vertretungsplans": {
+      "collection": "representationplan",
+      "via": "teachers"
+    },
+    "representationPlanAbsentTeachers": {
+      "collection": "representationplan",
+      "via": "absentTeachers"
+    },
+    "replacements": {
+      "collection": "replacement",
+      "via": "teachers"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Herr",
+        "Frau"
+      ]
+    }
+  }
+}

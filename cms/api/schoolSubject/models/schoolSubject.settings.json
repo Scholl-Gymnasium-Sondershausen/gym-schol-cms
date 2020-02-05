@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "SchoolSubjects",
+  "info": {
+    "name": "Schulfächer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "schoolClasses": {
+      "via": "schoolSubjects",
+      "collection": "schoolclass"
+    },
+    "teacher": {
+      "via": "schoolSubjects",
+      "model": "teacher"
+    }
+  }
+}

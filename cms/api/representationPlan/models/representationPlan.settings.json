@@ -1,0 +1,67 @@
+{
+  "connection": "default",
+  "collectionName": "representationPlan",
+  "info": {
+    "name": "Vertretungsplan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "DatumTitle": {
+      "type": "string"
+    },
+    "Schulname": {
+      "type": "string"
+    },
+    "ErstellungsDatum": {
+      "type": "datetime"
+    },
+    "createDate": {
+      "type": "date"
+    },
+    "abwesendLehrer": {
+      "type": "text"
+    },
+    "abwesendKlassen": {
+      "type": "text"
+    },
+    "aenderungLehrer": {
+      "type": "text"
+    },
+    "aenderungKlassen": {
+      "type": "text"
+    },
+    "aufsichten": {
+      "type": "json"
+    },
+    "vertretung": {
+      "type": "json"
+    },
+    "school_classes": {
+      "collection": "schoolclass",
+      "via": "vertretungsplans",
+      "dominant": true
+    },
+    "teachers": {
+      "via": "vertretungsplans",
+      "collection": "teacher",
+      "dominant": true
+    },
+    "absentTeachers": {
+      "via": "representationPlanAbsentTeachers",
+      "collection": "teacher",
+      "dominant": true
+    },
+    "absentClasses": {
+      "collection": "schoolclass",
+      "via": "representationPlanAbsentClasses",
+      "dominant": true
+    },
+    "replacements": {
+      "collection": "replacement",
+      "via": "representationPlan"
+    }
+  }
+}

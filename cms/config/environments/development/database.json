@@ -4,16 +4,17 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "schholl-gym-cms",
-        "host": "127.0.0.1",
         "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "host": "${process.env.DATABASE_HOST || 'schollgym-shard-00-00-7heei.mongodb.net,schollgym-shard-00-01-7heei.mongodb.net,schollgym-shard-00-02-7heei.mongodb.net'}",
+        "port": "${process.env.DATABASE_PORT || 27017}",
+        "database": "${process.env.DATABASE_NAME || 'SchollGymProd'}",
+        "username": "${process.env.DATABASE_USERNAME || 'schollDbProd'}",
+        "password": "${process.env.DATABASE_PASSWORD || 'hnzEapEU6RcrPhtm4'}"
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true
       }
     }
   }
 }
+

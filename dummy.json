@@ -1,0 +1,30 @@
+{
+  "klasse": [
+    "5a"
+  ],
+  "stunde": [
+    "1"
+  ],
+  "fach": [
+    {
+      "_": "En",
+      "dollar": {
+        "fageaendert": "ae"
+      }
+    }
+  ],
+  "lehrer": [
+    {
+      "_": "Frau Görg",
+      "dollar": {
+        "legeaendert": "ae"
+      }
+    }
+  ],
+  "raum": [
+    "208k"
+  ],
+  "info": [
+    "für MNT Frau Hoffmann "
+  ]
+}

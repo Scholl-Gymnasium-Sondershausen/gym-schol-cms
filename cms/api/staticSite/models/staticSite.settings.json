@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "staticSites",
+  "info": {
+    "name": "Statische Seiten"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "BannerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "key": {
+      "type": "string"
+    }
+  }
+}

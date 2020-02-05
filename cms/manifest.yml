@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-scholl-gym-cms
+  memory: 1024M
+  instances: 1
+  random-route: false
+  host: cf-scholl-gym-cms

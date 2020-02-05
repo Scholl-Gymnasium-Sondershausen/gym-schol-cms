@@ -1,0 +1,9 @@
+/.tmp
+/.cache
+/cf.conf
+/cf-add-mongoDb.sh
+/cf-login.sh
+/cf-push.sh
+/README.md
+/manifest.yml
+/node_modules

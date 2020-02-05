@@ -1,0 +1,40 @@
+{
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "Events"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "StartDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "EndDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "schoolClasses": {
+      "via": "event",
+      "collection": "schoolclass"
+    },
+    "wholeDay": {
+      "type": "boolean"
+    }
+  }
+}

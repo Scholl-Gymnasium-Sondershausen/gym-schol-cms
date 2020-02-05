@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/schoolClasses",
+      "handler": "schoolClass.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/schoolClasses/count",
+      "handler": "schoolClass.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/schoolClasses/:id",
+      "handler": "schoolClass.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/schoolClasses",
+      "handler": "schoolClass.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/schulklasseens/:id",
+      "handler": "schoolClass.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/schoolClasses/:id",
+      "handler": "schoolClass.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "replacements",
+  "info": {
+    "name": "Vertretungen"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "teachers": {
+      "via": "replacements",
+      "collection": "teacher",
+      "dominant": true
+    },
+    "hour": {
+      "type": "string"
+    },
+    "schulklassens": {
+      "collection": "schoolclass",
+      "via": "replacement"
+    },
+    "representationPlan": {
+      "via": "replacements",
+      "model": "representationplan"
+    }
+  }
+}

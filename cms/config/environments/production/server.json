@@ -1,14 +1,15 @@
 {
-  "host": "localhost",
+  "host": "cf-scholl-gym-cms.cfapps.eu10.hana.ondemand.com",
   "port": "${process.env.PORT || 1337}",
   "production": true,
   "proxy": {
     "enabled": false
   },
   "cron": {
-    "enabled": false
+    "enabled": true
   },
   "admin": {
-    "autoOpen": false
+    "autoOpen": false,
+    "path": "/dashboard"
   }
 }
